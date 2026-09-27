@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Karim Ahmed Hamdy - Software Engineer & Full-Stack Developer (Node.js, Vue.js, PostgreSQL) and IT infrastructure, Cairo, Egypt.">
+<title>كريم أحمد حمدي</title>
+<link rel="alternate" hreflang="en" href="https://karim-ahmed66.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#F6F7F9;
+  --surface:#FFFFFF;
+  --ink:#14171F;
+  --muted:#5A6272;
+  --line:#E2E5EB;
+  --accent:#1D4ED8;
+  --accent-soft:#EAF0FE;
+  --ok:#15803D;
+  --sans:"IBM Plex Sans","IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --arabic:"IBM Plex Sans Arabic","IBM Plex Sans",system-ui,"Segoe UI",Tahoma,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html[data-lang="ar"] body{font-family:var(--arabic);line-height:1.8}
+html:not([data-lang="ar"]) .ar, html[data-lang="ar"] .en{display:none!important}
+
+.wrap{max-width:980px;margin:0 auto;padding-inline:20px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink)}
+.mono{font-family:var(--mono)}
+.mark{width:34px;height:34px;border-radius:8px;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.5px}
+.nav{display:flex;align-items:center;gap:18px;font-size:14px}
+.nav a{color:var(--muted)}
+.nav a:hover{color:var(--ink);text-decoration:none}
+.lang{border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 13px var(--sans);padding:6px 12px;border-radius:999px;cursor:pointer}
+html[data-lang="en"] .lang{font-family:var(--arabic)}
+.lang:hover{border-color:var(--ink)}
+@media (max-width:720px){.nav a{display:none}}
+
+/* hero */
+.hero{padding-block:64px 40px}
+.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;color:var(--muted);border:1px solid var(--line);background:var(--surface);padding:5px 12px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 20%,transparent)}
+h1{font-size:clamp(38px,6vw,60px);line-height:1.05;letter-spacing:-.02em;margin:22px 0 12px;font-weight:700;text-wrap:balance}
+html[data-lang="ar"] h1{letter-spacing:0;line-height:1.25}
+.role{font-size:clamp(18px,2.4vw,22px);color:var(--muted);margin:0 0 22px;font-weight:500}
+.role b{color:var(--ink);font-weight:600}
+.lede{max-width:62ch;font-size:17px;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;font-family:inherit}
+.btn:hover{text-decoration:none;background:#000}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);background:var(--surface)}
+
+/* readout */
+.readout{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+.readout>div{padding:18px 20px;border-inline-start:1px solid var(--line)}
+.readout>div:first-child{border-inline-start:0}
+.readout .n{direction:ltr;text-align:start;font-family:var(--mono);font-size:28px;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.readout .l{font-size:13px;color:var(--muted);line-height:1.4}
+@media (max-width:720px){.readout{grid-template-columns:repeat(2,1fr)}.readout>div:nth-child(3){border-inline-start:0}.readout>div:nth-child(n+3){border-top:1px solid var(--line)}}
+html[data-lang="ar"] .readout .n{text-align:right}
+html[data-lang="ar"] .status{font-family:var(--arabic);font-size:13px}
+
+/* sections */
+section{padding-block:48px;border-top:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+html[data-lang="ar"] .eyebrow{letter-spacing:0;font-family:var(--arabic);font-weight:600;font-size:13px}
+h2{font-size:28px;line-height:1.2;margin:0 0 8px;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 28px;max-width:62ch}
+
+/* systems */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:18px;line-height:1.35}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tag{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--bg);border:1px solid var(--line);padding:2px 8px;border-radius:6px;direction:ltr}
+.metric{font-family:var(--mono);font-size:12.5px;color:var(--accent);background:var(--accent-soft);padding:3px 9px;border-radius:6px;align-self:flex-start;direction:ltr}
+html[data-lang="ar"] .metric{direction:rtl;font-family:var(--arabic)}
+
+/* infra list */
+.infra{display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px;margin:0;padding:0;list-style:none}
+.infra li{padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.infra li b{display:block;font-size:13px;color:var(--muted);font-weight:500}
+@media (max-width:720px){.infra{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:180px 1fr;gap:0;border-top:1px solid var(--line)}
+.skills dt,.skills dd{padding:14px 0;border-bottom:1px solid var(--line);margin:0}
+.skills dt{font-weight:600;font-size:15px}
+.skills dd{display:flex;flex-wrap:wrap;gap:6px}
+@media (max-width:600px){.skills{grid-template-columns:1fr}.skills dt{border-bottom:0;padding-bottom:4px}.skills dd{padding-top:0}}
+
+/* timeline */
+.tl{display:flex;flex-direction:column}
+.tl .row{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.tl .when{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;direction:ltr;text-align:start}
+html[data-lang="ar"] .tl .when{text-align:right}
+.tl h3{margin:0;font-size:17px}
+.tl .org{color:var(--muted);font-size:15px}
+.tl p{margin:6px 0 0;font-size:15px}
+@media (max-width:600px){.tl .row{grid-template-columns:1fr;gap:4px}}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media (max-width:720px){.two{grid-template-columns:1fr;gap:28px}}
+.plain{list-style:none;margin:0;padding:0}
+.plain li{padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.plain li span{color:var(--muted)}
+
+/* contact */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px}
+.clist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+@media (max-width:640px){.clist{grid-template-columns:1fr}}
+.citem{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.citem .k{font-size:12px;color:var(--muted);display:block}
+.citem .v{font-family:var(--mono);font-size:14px;direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere;user-select:all}
+.copy{flex:none;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 12.5px var(--sans);padding:6px 10px;border-radius:8px;cursor:pointer}
+html[data-lang="ar"] .copy{font-family:var(--arabic)}
+.copy:hover{border-color:var(--ink)}
+footer{padding-block:28px 40px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Karim Ahmed Hamdy"><span class="mark">KA</span><span class="en">Karim Ahmed</span><span class="ar">كريم أحمد</span></a>
+    <nav class="nav">
+      <a href="#work"><span class="en">Work</span><span class="ar">الأعمال</span></a>
+      <a href="#projects"><span class="en">Projects</span><span class="ar">المشاريع</span></a>
+      <a href="#skills"><span class="en">Skills</span><span class="ar">المهارات</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="ar">تواصل</span></a>
+      <button class="lang" id="langBtn" type="button"><span class="en">العربية</span><span class="ar">English</span></button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <span class="status"><span class="dot" aria-hidden="true"></span><span class="en">Open to full-time roles &amp; freelance projects</span><span class="ar">متاح لوظيفة بدوام كامل ومشاريع فريلانس</span></span>
+    <h1><span class="en">Karim Ahmed Hamdy</span><span class="ar">كريم أحمد حمدي</span></h1>
+    <p class="role"><span class="en"><b>Software Engineer &amp; Full-Stack Developer</b> · IT Infrastructure · Cairo, Egypt</span><span class="ar"><b>مهندس برمجيات ومطوّر Full-Stack</b> · بنية تحتية لتكنولوجيا المعلومات · القاهرة، مصر</span></p>
+    <p class="lede"><span class="en">I build and run the internal systems of Misr Exchange, a Bank Misr company, as its sole in-house developer, and I keep the IT infrastructure of 80 branches running. I also build web and mobile apps for businesses as a freelancer.</span><span class="ar">بطوّر وبشغّل الأنظمة الداخلية لشركة مصر للصرافة (إحدى شركات بنك مصر) كمطوّر وحيد للشركة، ومسؤول عن البنية التحتية لـ 80 فرع. وبعمل كمان تطبيقات ويب وموبايل للشركات كفريلانسر.</span></p>
+    <div class="cta">
+      <a class="btn" href="#contact"><span class="en">Get in touch</span><span class="ar">تواصل معايا</span></a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/karim-ahmed-hamdy" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/karim-ahmed66" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <div class="readout" aria-label="Key numbers">
+      <div><div class="n">80</div><div class="l"><span class="en">branches + head office supported</span><span class="ar">فرع + المركز الرئيسي</span></div></div>
+      <div><div class="n">400+</div><div class="l"><span class="en">employees using my systems</span><span class="ar">موظف بيستخدموا أنظمتي</span></div></div>
+      <div><div class="n">500+</div><div class="l"><span class="en">support tickets per month</span><span class="ar">تذكرة دعم في الشهر</span></div></div>
+      <div><div class="n">8</div><div class="l"><span class="en">new branches set up</span><span class="ar">فروع جديدة جهّزتها</span></div></div>
+    </div>
+  </div>
+
+  <section id="work">
+    <p class="eyebrow"><span class="en">Misr Exchange · Feb 2025 – present</span><span class="ar">مصر للصرافة · من فبراير 2025</span></p>
+    <h2><span class="en">Systems I built and run</span><span class="ar">أنظمة بنيتها وبشغّلها</span></h2>
+    <p class="sub"><span class="en">Owning the full lifecycle, from requirements and design to deployment and support, in a regulated banking environment.</span><span class="ar">مسؤول عن كل المراحل، من المتطلبات والتصميم لحد التشغيل والدعم، في بيئة مصرفية خاضعة للرقابة.</span></p>
+    <div class="grid">
+      <article class="card">
+        <span class="metric"><span class="en">500+ tickets / month</span><span class="ar">500+ تذكرة شهرياً</span></span>
+        <h3><span class="en">Ticketing &amp; Support System</span><span class="ar">نظام التذاكر والدعم الفني</span></h3>
+        <p><span class="en">Connects all 80 branches and head-office departments, with a dedicated chat per ticket. Replaced WhatsApp and phone requests, so no request gets lost.</span><span class="ar">بيربط الـ 80 فرع وإدارات المركز الرئيسي، ولكل تذكرة شات خاص بيها. بدّل طلبات الواتساب والتليفون، فمفيش طلب بيضيع.</span></p>
+        <div class="meta"><span class="tag">Node.js</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span></div>
+      </article>
+      <article class="card">
+        <span class="metric"><span class="en">150+ circulars / year</span><span class="ar">150+ تعميم سنوياً</span></span>
+        <h3><span class="en">Document &amp; Circulars Management</span><span class="ar">نظام إدارة المستندات والتعاميم</span></h3>
+        <p><span class="en">Each head-office department publishes circulars and instructions directly to all branches, replacing a developer-dependent process. Active Directory login, Arabic-first UI.</span><span class="ar">كل إدارة بتنشر تعاميمها وتعليماتها للفروع مباشرة، بدل ما كانت محتاجة مطوّر. تسجيل دخول بـ Active Directory وواجهة عربي.</span></p>
+        <div class="meta"><span class="tag">Node.js</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span><span class="tag">Active Directory</span></div>
+      </article>
+      <article class="card">
+        <span class="metric"><span class="en">Passed external pentest</span><span class="ar">اجتاز اختبار اختراق خارجي</span></span>
+        <h3><span class="en">Core Exchange System</span><span class="ar">نظام الصرافة الأساسي الجديد</span></h3>
+        <p><span class="en">Co-developed in a 2-person team: exchange transactions, treasury, custody, expenses, accounts and reporting. Heading to production rollout.</span><span class="ar">اتبنى في فريق من اتنين: عمليات الصرافة، والخزينة، والعُهد، والمصروفات، والحسابات، والتقارير. في طريقه للتشغيل الفعلي.</span></p>
+        <div class="meta"><span class="tag">Node.js</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span></div>
+      </article>
+      <article class="card">
+        <span class="metric"><span class="en">In progress</span><span class="ar">قيد التطوير</span></span>
+        <h3><span class="en">HR, Admin Affairs &amp; Asset Management</span><span class="ar">أنظمة الموارد البشرية والشؤون الإدارية والأصول</span></h3>
+        <p><span class="en">New systems for HR and administrative affairs, and for asset and inventory management across branches and warehouses. I also maintain the legacy exchange system and mentor new developers.</span><span class="ar">أنظمة جديدة للموارد البشرية والشؤون الإدارية، ولإدارة الأصول والمخزون في الفروع والمخازن. وكمان بطوّر النظام القديم وبدرّب المطوّرين الجداد.</span></p>
+        <div class="meta"><span class="tag">Node.js</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span></div>
+      </article>
+    </div>
+
+    <h3 style="margin:36px 0 4px;font-size:18px"><span class="en">Infrastructure &amp; operations</span><span class="ar">البنية التحتية والتشغيل</span></h3>
+    <ul class="infra">
+      <li><b><span class="en">Networking</span><span class="ar">الشبكات</span></b>Cisco switches &amp; routers, VLANs, VPN</li>
+      <li><b><span class="en">Windows Server</span><span class="ar">Windows Server</span></b>Active Directory, Group Policy, DNS, DHCP, IIS</li>
+      <li><b><span class="en">Virtualization &amp; backup</span><span class="ar">الـ Virtualization والنسخ الاحتياطي</span></b>VMware, Hyper-V, SQL Server backup, disaster recovery</li>
+      <li><b><span class="en">Monitoring &amp; automation</span><span class="ar">المراقبة والأتمتة</span></b>ManageEngine OpManager, PowerShell</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <p class="eyebrow"><span class="en">Freelance · since 2023</span><span class="ar">فريلانس · من 2023</span></p>
+    <h2><span class="en">Client &amp; personal projects</span><span class="ar">مشاريع لعملاء ومشاريع شخصية</span></h2>
+    <p class="sub"><span class="en">Delivered end to end: requirements, build, delivery and client communication.</span><span class="ar">من أول المتطلبات لحد التسليم والتواصل مع العميل.</span></p>
+    <div class="grid">
+      <article class="card">
+        <h3><span class="en">Sales &amp; Distribution Platform</span><span class="ar">منصة مبيعات وتوزيع</span></h3>
+        <p><span class="en">For a cosmetics company: e-commerce with an admin dashboard and a React Native app for sales reps. Orders, inventory, purchasing, catalog and reporting, with role-based permissions.</span><span class="ar">لشركة مستحضرات تجميل: متجر إلكتروني ولوحة تحكم وتطبيق React Native لمندوبي المبيعات. الطلبات والمخزون والمشتريات والكتالوج والتقارير، بصلاحيات حسب الدور.</span></p>
+        <div class="meta"><span class="tag">Vue.js</span><span class="tag">Node.js</span><span class="tag">React Native</span></div>
+      </article>
+      <article class="card">
+        <h3><span class="en">Custom Picture Frames Store</span><span class="ar">متجر براويز مخصصة</span></h3>
+        <p><span class="en">Personal project in development: a bilingual store with a custom-order flow and photo uploads, order tracking by code without registration, and an admin dashboard.</span><span class="ar">مشروع شخصي قيد التطوير: متجر عربي وإنجليزي بطلبات مخصصة ورفع صور، وتتبع الطلب بكود من غير تسجيل، ولوحة تحكم.</span></p>
+        <div class="meta"><span class="tag">Vue.js</span><span class="tag">Node.js</span><span class="tag">Express</span></div>
+      </article>
+      <article class="card">
+        <h3><span class="en">Corporate Landing Page</span><span class="ar">صفحة تعريفية لشركة</span></h3>
+        <p><span class="en">A responsive landing page presenting a plastics manufacturer's products and services.</span><span class="ar">صفحة متجاوبة بتعرض منتجات وخدمات مصنع بلاستيك.</span></p>
+        <div class="meta"><span class="tag">React</span><span class="tag">Node.js</span></div>
+      </article>
+      <article class="card">
+        <h3><span class="en">What I can build for you</span><span class="ar">أقدر أعملك إيه</span></h3>
+        <p><span class="en">Admin dashboards, internal management systems, e-commerce stores, REST APIs and business websites.</span><span class="ar">لوحات تحكم، وأنظمة إدارة داخلية، ومتاجر إلكترونية، وREST APIs، ومواقع للشركات.</span></p>
+        <div class="meta"><a class="btn ghost" href="#contact" style="padding:8px 14px;font-size:14px"><span class="en">Start a project</span><span class="ar">ابدأ مشروع</span></a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <p class="eyebrow"><span class="en">Toolbox</span><span class="ar">الأدوات</span></p>
+    <h2><span class="en">Skills</span><span class="ar">المهارات</span></h2>
+    <dl class="skills">
+      <dt><span class="en">Development</span><span class="ar">البرمجة</span></dt>
+      <dd><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Vue.js</span><span class="tag">React</span><span class="tag">React Native</span><span class="tag">JavaScript</span><span class="tag">REST APIs</span><span class="tag">HTML5</span><span class="tag">CSS</span></dd>
+      <dt><span class="en">Databases</span><span class="ar">قواعد البيانات</span></dt>
+      <dd><span class="tag">PostgreSQL</span><span class="tag">SQL Server</span><span class="tag">Backup &amp; Recovery</span></dd>
+      <dt><span class="en">Systems</span><span class="ar">الأنظمة</span></dt>
+      <dd><span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">Group Policy</span><span class="tag">DNS / DHCP</span><span class="tag">IIS</span><span class="tag">VMware</span><span class="tag">Hyper-V</span><span class="tag">PowerShell</span></dd>
+      <dt><span class="en">Networking &amp; security</span><span class="ar">الشبكات والأمان</span></dt>
+      <dd><span class="tag">Cisco</span><span class="tag">VLANs</span><span class="tag">VPN</span><span class="tag">TCP/IP</span><span class="tag">OpManager</span><span class="tag">Secure coding</span><span class="tag">Access control</span></dd>
+    </dl>
+  </section>
+
+  <section id="experience">
+    <p class="eyebrow"><span class="en">Background</span><span class="ar">الخلفية</span></p>
+    <h2><span class="en">Experience &amp; education</span><span class="ar">الخبرات والتعليم</span></h2>
+    <div class="tl">
+      <div class="row"><div class="when">Feb 2025 – now</div><div><h3><span class="en">Software Engineer · IT Specialist</span><span class="ar">مهندس برمجيات · أخصائي تكنولوجيا معلومات</span></h3><div class="org"><span class="en">Misr Exchange (a Bank Misr company)</span><span class="ar">مصر للصرافة (إحدى شركات بنك مصر)</span></div></div></div>
+      <div class="row"><div class="when">2023 – now</div><div><h3><span class="en">Freelance Full-Stack Developer</span><span class="ar">مطوّر Full-Stack فريلانس</span></h3><div class="org"><span class="en">Self-employed</span><span class="ar">عمل حر</span></div></div></div>
+      <div class="row"><div class="when">Aug 2023 – Apr 2024</div><div><h3><span class="en">Programming &amp; Web Development Instructor</span><span class="ar">مدرّب برمجة وتطوير ويب</span></h3><div class="org">Instant Academy</div></div></div>
+      <div class="row"><div class="when">Jun – Aug 2022</div><div><h3><span class="en">Programming Instructor (Internship)</span><span class="ar">مدرّب برمجة (تدريب)</span></h3><div class="org">Instant Academy</div></div></div>
+      <div class="row"><div class="when">2020 – 2024</div><div><h3><span class="en">BSc Computer Science · Grade B+</span><span class="ar">بكالوريوس علوم الحاسب · تقدير جيد جداً</span></h3><div class="org"><span class="en">Future Academy</span><span class="ar">أكاديمية المستقبل</span></div><p><span class="en">Graduation project: a blood-glucose monitoring smartwatch with a companion mobile app.</span><span class="ar">مشروع التخرج: ساعة ذكية لقياس السكر في الدم مع تطبيق موبايل.</span></p></div></div>
+    </div>
+
+    <div class="two" style="margin-top:40px">
+      <div>
+        <h3 style="margin:0 0 6px;font-size:18px"><span class="en">Certifications</span><span class="ar">الشهادات</span></h3>
+        <ul class="plain">
+          <li>Penetration Testing (Web &amp; Network) <span>· Instant Academy</span></li>
+          <li>Full-Stack Web Development (React, Node.js) <span>· Udemy</span></li>
+          <li>Algorithms &amp; Data Structures <span>· Cloud Native Bootcamp</span></li>
+          <li>Front-End Development Track <span>· ITI</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin:0 0 6px;font-size:18px"><span class="en">Achievements &amp; leadership</span><span class="ar">الإنجازات والقيادة</span></h3>
+        <ul class="plain">
+          <li><span class="en">GDSC Solution Challenge (AUC) · 12th place</span><span class="ar">GDSC Solution Challenge (AUC) · المركز 12</span></li>
+          <li><span class="en">Competitive programming: ECPC 2021–2025, IEEEXtreme 16.0 &amp; 17.0</span><span class="ar">برمجة تنافسية: ECPC من 2021 لـ 2025، و IEEEXtreme 16.0 و 17.0</span></li>
+          <li><span class="en">Leadership roles at GDSC, IEEE and Pioneers 180</span><span class="ar">أدوار قيادية في GDSC و IEEE و Pioneers 180</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <p class="eyebrow"><span class="en">Contact</span><span class="ar">تواصل</span></p>
+      <h2><span class="en">Have a role or a project in mind?</span><span class="ar">عندك وظيفة أو مشروع؟</span></h2>
+      <p class="sub" style="margin-bottom:0"><span class="en">Email or WhatsApp works best. I usually reply within a day.</span><span class="ar">الإيميل أو الواتساب أسرع طريقة. عادةً برد خلال يوم.</span></p>
+      <div class="clist">
+        <div class="citem"><div><span class="k"><span class="en">Email</span><span class="ar">الإيميل</span></span><span class="v">karim.dev00@gmail.com</span></div><button class="copy" type="button" data-copy="karim.dev00@gmail.com" id="copyEmail"><span class="en">Copy</span><span class="ar">نسخ</span></button></div>
+        <div class="citem"><div><span class="k"><span class="en">Phone · WhatsApp</span><span class="ar">موبايل · واتساب</span></span><span class="v">+20 115 380 4882</span></div><button class="copy" type="button" data-copy="+201153804882" id="copyPhone"><span class="en">Copy</span><span class="ar">نسخ</span></button></div>
+        <div class="citem"><div><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/karim-ahmed-hamdy" target="_blank" rel="noopener">linkedin.com/in/karim-ahmed-hamdy</a></div></div>
+        <div class="citem"><div><span class="k">WhatsApp</span><a class="v" href="https://wa.me/201153804882" target="_blank" rel="noopener">wa.me/201153804882</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><span>© 2026 Karim Ahmed Hamdy</span><span><span class="en">Cairo, Egypt</span><span class="ar">القاهرة، مصر</span></span></footer>
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang',l);
+    root.setAttribute('lang',l);
+    root.setAttribute('dir',l==='ar'?'rtl':'ltr');
+    try{localStorage.setItem('kah-ar-lang',l)}catch(e){}
+  }
+  var saved=null;
+  try{saved=localStorage.getItem('kah-ar-lang')}catch(e){}
+  if(location.hash==='#ar') saved='ar';
+  if(location.hash==='#en') saved='en';
+  setLang(saved==='en'?'en':'ar');
+  document.getElementById('langBtn').addEventListener('click',function(){
+    setLang(root.getAttribute('data-lang')==='ar'?'en':'ar');
+  });
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var txt=b.getAttribute('data-copy');
+      var ar=root.getAttribute('data-lang')==='ar';
+      var done=function(){var o=b.innerHTML;b.textContent=ar?'اتنسخ':'Copied';setTimeout(function(){b.innerHTML=o},1500)};
+      var fallback=function(){var v=b.parentNode.querySelector('.v');var r=document.createRange();r.selectNodeContents(v);var s=getSelection();s.removeAllRanges();s.addRange(r)};
+      try{navigator.clipboard.writeText(txt).then(done,fallback)}catch(e){fallback()}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

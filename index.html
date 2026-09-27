@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karim Ahmed Hamdy — Full-Stack Software Engineer</title>
+<meta name="description" content="Karim Ahmed Hamdy — Full-Stack Software Engineer (Node.js, Vue.js, PostgreSQL) with hands-on IT infrastructure experience, based in Cairo, Egypt.">
+<meta property="og:title" content="Karim Ahmed Hamdy — Full-Stack Software Engineer">
+<meta property="og:description" content="Node.js · Vue.js · PostgreSQL + IT infrastructure. Building internal systems for a regulated financial company in Cairo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://karim-ahmed66.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f6feb'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='30' fill='white'%3EKA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfbfa; --surface:#ffffff; --surface-2:#f3f4f2; --text:#16181d; --muted:#5b616e; --line:#e4e6e3;
+  --accent:#1f6feb; --accent-ink:#ffffff; --accent-soft:#e8f0fe; --good:#1a7f37;
+  --radius:14px; --maxw:1080px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1116; --surface:#151a21; --surface-2:#1b212a; --text:#e8eaee; --muted:#9aa3b2; --line:#262d38;
+    --accent:#4c8dff; --accent-ink:#0b0f14; --accent-soft:#16233a; --good:#3fb950;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1116; --surface:#151a21; --surface-2:#1b212a; --text:#e8eaee; --muted:#9aa3b2; --line:#262d38;
+  --accent:#4c8dff; --accent-ink:#0b0f14; --accent-soft:#16233a; --good:#3fb950;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-weight:700;color:var(--text);letter-spacing:-.01em}
+.brand span{color:var(--accent)}
+nav.links{display:flex;gap:22px;align-items:center}
+nav.links a{color:var(--muted);font-size:14px;font-weight:500}
+nav.links a:hover{color:var(--text);text-decoration:none}
+.theme-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:10px;width:36px;height:36px;cursor:pointer;display:grid;place-items:center}
+@media (max-width:760px){nav.links a:not(.keep){display:none}}
+
+/* hero */
+.hero{padding-top:88px;padding-bottom:64px}
+.eyebrow{font:500 13px/1 "JetBrains Mono",ui-monospace,monospace;color:var(--accent);letter-spacing:.02em;margin-bottom:18px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.08;letter-spacing:-.03em;margin:0 0 18px}
+.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:720px;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--text);background:var(--surface)}
+.btn:hover{text-decoration:none;border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn svg{width:18px;height:18px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin-top:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px color-mix(in srgb,var(--good) 20%,transparent)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.stat b{display:block;font-size:26px;letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:14px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;letter-spacing:-.02em;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:680px}
+
+/* experience */
+.job{display:grid;grid-template-columns:220px 1fr;gap:28px}
+.job .meta{color:var(--muted);font-size:14px}
+.job .meta b{display:block;color:var(--text);font-size:16px}
+@media (max-width:760px){.job{grid-template-columns:1fr;gap:10px}}
+.systems{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0 22px}
+@media (max-width:760px){.systems{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.card h3{margin:0 0 6px;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.tag{display:inline-block;font:500 12px/1 "JetBrains Mono",ui-monospace,monospace;color:var(--accent);background:var(--accent-soft);padding:6px 8px;border-radius:6px;margin:12px 6px 0 0}
+ul.clean{margin:0;padding-left:18px}
+ul.clean li{margin:6px 0;color:var(--muted)}
+ul.clean li b{color:var(--text);font-weight:600}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.projects{grid-template-columns:1fr}}
+.project{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.project .thumb{aspect-ratio:16/10;background:var(--surface-2);display:grid;place-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.project .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.project .thumb pre{margin:0;padding:18px;font:12.5px/1.6 "JetBrains Mono",ui-monospace,monospace;color:var(--muted);width:100%;white-space:pre-wrap}
+.project .thumb .k{color:var(--accent)}
+.project .body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.project h3{margin:0;font-size:18px}
+.project p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.project .links{display:flex;gap:14px;font-size:14px;font-weight:600;margin-top:6px}
+.icon-tile{width:64px;height:64px;border-radius:16px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.icon-tile svg{width:32px;height:32px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media (max-width:760px){.skills{grid-template-columns:1fr}}
+.skills .card h3{font-size:15px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13.5px;padding:6px 10px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line)}
+
+/* two col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Karim<span>.</span></a>
+    <nav class="links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">Background</a>
+      <a class="keep" href="#contact">Contact</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="eyebrow">Full-Stack Software Engineer · IT Infrastructure</div>
+    <h1>Karim Ahmed Hamdy</h1>
+    <p class="lead">I build and run internal business systems end to end — from requirements and database design to deployment and support — with <b>Node.js</b>, <b>Vue.js</b> and <b>PostgreSQL</b>, backed by hands-on experience running the Windows and network infrastructure they live on.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:karim.dev00@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/karim-ahmed-hamdy" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.54h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.5 4.77 5.76V21h-4v-5.2c0-1.24-.02-2.84-1.8-2.84-1.8 0-2.08 1.35-2.08 2.75V21h-4z"/></svg>LinkedIn</a>
+      <a class="btn" href="https://github.com/karim-ahmed66" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+    </div>
+    <div class="status"><span class="dot"></span>Cairo, Egypt · Open to full-time roles and freelance projects</div>
+
+    <div class="stats">
+      <div class="stat"><b>80+</b><span>branches supported, plus head office</span></div>
+      <div class="stat"><b>400+</b><span>employees using the systems I support</span></div>
+      <div class="stat"><b>500+</b><span>support tickets / month through my ticketing system</span></div>
+      <div class="stat"><b>Pentest</b><span>passed by the core system I co-developed</span></div>
+    </div>
+  </div>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="sub">Sole developer of the company's internal systems, and part of the team keeping IT running across every branch.</p>
+
+      <div class="job">
+        <div class="meta"><b>Misr Exchange</b>a Bank Misr company<br>IT Specialist · Full-Stack Developer<br>Feb 2025 — Present</div>
+        <div>
+          <div class="systems">
+            <div class="card"><h3>Ticketing &amp; Support System</h3><p>Connects all 80 branches with head-office departments, with a dedicated chat per ticket. Replaced WhatsApp and phone requests so nothing gets lost.</p><span class="tag">Node.js</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span></div>
+            <div class="card"><h3>Document &amp; Circulars Management</h3><p>Each department publishes circulars and instructions straight to all branches (150+ a year), and daily memos moved from paper to digital archiving.</p><span class="tag">Node.js</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span></div>
+            <div class="card"><h3>Core Exchange System</h3><p>Co-developed in a two-person team: exchange transactions, treasury, custody, expenses, accounts and reporting. Passed an external penetration test.</p><span class="tag">Node.js</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span></div>
+            <div class="card"><h3>HR, Admin, Asset &amp; Inventory</h3><p>In progress — systems for HR and administrative workflows, assets, warehouses and transfers between branches.</p><span class="tag">Node.js</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span></div>
+          </div>
+          <ul class="clean">
+            <li><b>Infrastructure:</b> IT support and operations for 80 branches and head office; set up IT and network infrastructure for 8 new branches.</li>
+            <li><b>Windows Server:</b> Active Directory, Group Policy, DNS, DHCP and IIS — users, devices, security policies and access control.</li>
+            <li><b>Networking:</b> Cisco switches and routers (port access, VLANs), VPN connectivity and performance.</li>
+            <li><b>Data &amp; continuity:</b> SQL Server backup and recovery, VMware/Hyper-V, disaster-recovery activities, monitoring with ManageEngine OpManager.</li>
+            <li><b>Team:</b> onboard and mentor new developers, assign and follow up on their tasks; maintain the legacy exchange system.</li>
+          </ul>
+          <p class="note">Company systems are proprietary, so their code and screens are not published.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="sub">Open-source work and case studies of freelance and personal projects.</p>
+      <div class="projects">
+        <article class="project">
+          <div class="thumb"><pre><span class="k">PS&gt;</span> .\Get-StaleADAccount.ps1 -DaysInactive 90
+<span class="k">PS&gt;</span> .\Invoke-SqlBackupJob.ps1 -ServerInstance SQL01
+<span class="k">PS&gt;</span> .\Test-SiteConnectivity.ps1 -CsvPath .\sites.csv
+<span class="k">PS&gt;</span> .\New-BulkADUser.ps1 -CsvPath .\new-hires.csv -WhatIf</pre></div>
+          <div class="body">
+            <h3>Windows Sysadmin Toolkit</h3>
+            <p>PowerShell scripts for multi-site Windows environments: bulk AD onboarding, stale-account audits, access reviews, server health reports, verified SQL Server backups and parallel connectivity checks.</p>
+            <div><span class="tag">PowerShell</span><span class="tag">Active Directory</span><span class="tag">SQL Server</span></div>
+            <div class="links"><a href="https://github.com/karim-ahmed66/windows-sysadmin-toolkit" target="_blank" rel="noopener">Source on GitHub →</a></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="thumb"><img src="https://raw.githubusercontent.com/karim-ahmed66/lolos-frames-showcase/main/screenshots/hero.png" alt="Lolo's Frames home page" loading="lazy"></div>
+          <div class="body">
+            <h3>Lolo's Frames</h3>
+            <p>Bilingual store for a handmade picture-frame brand: custom-order flow with up to 5 photo uploads, order tracking by code without registration, and an admin dashboard.</p>
+            <div><span class="tag">Vue.js</span><span class="tag">Node.js</span><span class="tag">Express</span></div>
+            <div class="links"><a href="https://github.com/karim-ahmed66/lolos-frames-showcase" target="_blank" rel="noopener">Case study →</a></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="thumb"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v6H3z"/><path d="M5 9v12h14V9"/><path d="M9 13h6"/></svg></div></div>
+          <div class="body">
+            <h3>Sales &amp; Distribution Platform</h3>
+            <p>For a cosmetics distributor: e-commerce platform with an admin dashboard and a React Native app for sales reps — orders, inventory, purchasing, catalog, reporting and role-based permissions.</p>
+            <div><span class="tag">Vue.js</span><span class="tag">Node.js</span><span class="tag">React Native</span></div>
+            <div class="links"><span style="color:var(--muted);font-weight:500">Client project · private</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="sub">Software development and the infrastructure underneath it.</p>
+      <div class="skills">
+        <div class="card"><h3>Development</h3><div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Vue.js</span><span class="chip">React</span><span class="chip">React Native</span><span class="chip">JavaScript</span><span class="chip">REST APIs</span></div></div>
+        <div class="card"><h3>Databases &amp; backup</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">MS SQL Server</span><span class="chip">Backup &amp; recovery</span><span class="chip">Disaster recovery</span></div></div>
+        <div class="card"><h3>Systems &amp; infrastructure</h3><div class="chips"><span class="chip">Windows Server</span><span class="chip">Active Directory</span><span class="chip">Group Policy</span><span class="chip">DNS / DHCP</span><span class="chip">IIS</span><span class="chip">VMware / Hyper-V</span><span class="chip">PowerShell</span></div></div>
+        <div class="card"><h3>Networking &amp; security</h3><div class="chips"><span class="chip">TCP/IP</span><span class="chip">VLANs</span><span class="chip">VPN</span><span class="chip">Cisco switches &amp; routers</span><span class="chip">Secure coding</span><span class="chip">Access control</span><span class="chip">ManageEngine OpManager</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>Background</h2>
+      <p class="sub">Education, competitions and teaching.</p>
+      <div class="two">
+        <div class="card">
+          <h3>Education &amp; training</h3>
+          <ul class="clean">
+            <li><b>BSc Computer Science</b> — Future Academy, 2020–2024. Graduation project: a blood-glucose monitoring smartwatch with a companion mobile app.</li>
+            <li>Penetration Testing (Web &amp; Network) — Instant Academy</li>
+            <li>Front-End Development track — ITI</li>
+            <li>Full-Stack Web Development; Algorithms &amp; Data Structures</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Competitions &amp; teaching</h3>
+          <ul class="clean">
+            <li><b>GDSC Solution Challenge (AUC)</b> — 12th place</li>
+            <li><b>Competitive programming</b> — ECPC (2021–2025), IEEEXtreme 16.0 &amp; 17.0</li>
+            <li><b>Instructor at Instant Academy</b> (2022–2024) — programming, C++ and web development</li>
+            <li>Leadership and technical roles in GDSC, IEEE and Pioneers 180</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Let's talk</h2>
+      <p class="sub">Open to full-time software engineering roles and freelance projects. The fastest way to reach me is email or LinkedIn.</p>
+      <div class="contact">
+        <a class="btn primary" href="mailto:karim.dev00@gmail.com">karim.dev00@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/karim-ahmed-hamdy" target="_blank" rel="noopener">linkedin.com/in/karim-ahmed-hamdy</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year">2026</span> Karim Ahmed Hamdy · Cairo, Egypt</div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
